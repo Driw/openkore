@@ -75,3 +75,10 @@ packet parser/PACKET PARSE RO/config.xml
 */obj/
 /build
 /.vscode
+
+# OpenKore Generated files
+manual
+
+# Personal files
+profile
+start_*
