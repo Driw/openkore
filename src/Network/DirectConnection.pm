@@ -611,6 +611,9 @@ sub checkConnection {
 			}
 
 			$messageSender->sendPing() if $master->{serverType} eq 'ROla';
+			if ($master->{private}) {
+				$self->{enable_checksum} = 0;
+			}
 			$messageSender->sendMapLogin($accountID, $charID, $sessionID, $accountSex2);
 			$timeout_ex{master}{time} = time;
 			$timeout_ex{master}{timeout} = $timeout{reconnect}{timeout};
